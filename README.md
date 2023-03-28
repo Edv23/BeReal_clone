@@ -30,9 +30,23 @@ The following date features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories: 
 
-<img src="https://github.com/Edv23/Scavenger-Hunt/blob/main/ezgif.com-video-to-gif.gif" width=200><br>
+1) sign up new member, log out, and log in again:
+
+
+<img src="https://github.com/Edv23/BeReal_clone/blob/main/ezgif.com-video-to-gif.gif" width=200><br>
+
+
+2) upload picture and view past post:
+
+
+<img src="https://github.com/Edv23/BeReal_clone/blob/main/ezgif.com-video-to-gif%20(1).gif" width=200><br>
+
+3) close app and still be logged in:
+
+
+<img src="https://github.com/Edv23/BeReal_clone/blob/main/ezgif.com-video-to-gif%20(2).gif" width=200><br>
 
 GIF created with ...  
 
