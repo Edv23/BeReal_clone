@@ -236,8 +236,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="if7-R7-g8V">
-                                <rect key="frame" x="0.0" y="134" width="390" height="710"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="if7-R7-g8V">
+                                <rect key="frame" x="0.0" y="91" width="390" height="753"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -277,12 +277,26 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="390" height="390"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </imageView>
+                                                                <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qS-oC-cII">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="390"/>
+                                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cps-0l-EYY">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="390"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    </view>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="0qS-oC-cII" secondAttribute="height" multiplier="1:1" id="rpb-aX-v2J"/>
+                                                                    </constraints>
+                                                                    <blurEffect style="regular"/>
+                                                                </visualEffectView>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstItem="G25-6h-Uyo" firstAttribute="leading" secondItem="Grc-Nh-5kQ" secondAttribute="leading" id="2BF-M0-Aan"/>
+                                                                <constraint firstItem="0qS-oC-cII" firstAttribute="top" secondItem="G25-6h-Uyo" secondAttribute="top" id="5nC-ie-NnO"/>
                                                                 <constraint firstAttribute="trailing" secondItem="G25-6h-Uyo" secondAttribute="trailing" id="J1I-Ko-2vk"/>
                                                                 <constraint firstItem="G25-6h-Uyo" firstAttribute="top" secondItem="Grc-Nh-5kQ" secondAttribute="top" id="R46-lG-xCP"/>
+                                                                <constraint firstItem="0qS-oC-cII" firstAttribute="leading" secondItem="G25-6h-Uyo" secondAttribute="leading" id="YMW-N9-WzS"/>
+                                                                <constraint firstItem="0qS-oC-cII" firstAttribute="bottom" secondItem="G25-6h-Uyo" secondAttribute="bottom" id="gKX-ab-frI"/>
                                                                 <constraint firstAttribute="bottom" secondItem="G25-6h-Uyo" secondAttribute="bottom" id="ypY-wd-mJR"/>
                                                                 <constraint firstAttribute="width" secondItem="Grc-Nh-5kQ" secondAttribute="height" multiplier="1:1" id="zvy-90-pg7"/>
                                                             </constraints>
@@ -314,6 +328,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="blurView" destination="0qS-oC-cII" id="PzR-Nl-59s"/>
                                             <outlet property="captionLabel" destination="w5F-8W-aa3" id="JF4-sf-jGH"/>
                                             <outlet property="dateLabel" destination="fUP-Sn-Nbi" id="ou4-Bl-xg1"/>
                                             <outlet property="postImageView" destination="G25-6h-Uyo" id="ZGC-qp-QRH"/>
@@ -440,12 +455,20 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Jam-Ov-Xnb">
-                        <barButtonItem key="rightBarButtonItem" title="Post" id="oL3-4g-14f">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="onShareTapped:" destination="3KS-34-J8g" id="IVS-HO-W9Y"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Post" id="oL3-4g-14f">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="onShareTapped:" destination="3KS-34-J8g" id="IVS-HO-W9Y"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="camera" catalog="system" id="0lC-JZ-CDw">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="onTakePhotoTapped:" destination="3KS-34-J8g" id="AyH-vw-S06"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="captionTextField" destination="Amx-Rq-yFI" id="KZe-ap-adl"/>
@@ -464,6 +487,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="93"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
