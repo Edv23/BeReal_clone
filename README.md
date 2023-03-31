@@ -1,3 +1,46 @@
+# Project 6 -  BeReal_clone pt 2. 
+
+Submitted by: Erick Veletanga
+
+BeReal clone is an app that clones some of the main functionalities of the trending app called BeReal.
+
+Time spent: 4 hours spent in total
+
+## Required Features
+
+The following **required** functionality is completed:
+
+- [x] User can launch camera to take photo instead of photo library
+- [x] User session persists when application is closed and relaunched
+- [x] Users are able to log out and return to sign in page
+- [x] Users are NOT able to see other photos until they upload their own	
+ 
+The following **optional** features are implemented:
+
+- [ ] User receive notifcation when it is time to post
+- [ ] Users can make comments and view comments in posts	
+
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src="https://github.com/Edv23/BeReal_clone/blob/main/ezgif.com-video-to-gif.gif" width=200><br>
+
+
+close app and still be logged in (code from the first part did not change):
+
+<img src="https://github.com/Edv23/BeReal_clone/blob/main/ezgif.com-video-to-gif%20(2).gif" width=200><br>
+
+## Notes
+
+Struggled finding a way to get the camera to work. 
+
+
+
+
+----------------------------------------------------------------------------------------------------------------
+
 # Project 5 - BeReal_clone
 
 Submitted by: Erick Veletanga
